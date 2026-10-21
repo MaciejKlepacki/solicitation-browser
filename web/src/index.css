@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* SalesPatriot-style tokens: near-black ink, light surface, one blue accent, no radii. */
+@theme {
+  --color-ink: #12171a;
+  --color-ink-muted: rgb(18 23 26 / 0.6);
+  --color-ink-faint: rgb(18 23 26 / 0.35);
+  --color-line: rgb(18 23 26 / 0.1);
+  --color-line-strong: rgb(18 23 26 / 0.3);
+  --color-surface: #f6f6f6;
+  --color-primary: #1957ea;
+  --color-primary-hover: #0099ff;
+  --color-primary-soft: rgb(25 87 234 / 0.06);
+  --color-alert: #ac0000;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius: 0px;
+}
+
+@layer base {
+  html { font-feature-settings: "tnum" 1, "cv11" 1; letter-spacing: -0.01em; }
+  body { font-family: var(--font-sans); }
+  ::selection { background: var(--color-primary); color: white; }
+}
+
+.mono { font-family: var(--font-mono); letter-spacing: 0; }
+.label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
